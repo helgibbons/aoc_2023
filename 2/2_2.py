@@ -27,15 +27,12 @@ with open("2/input.txt") as f:
                 # split colour
                 colour_value, colour = colour.split(" ")
                 # check the colours against the highest values
-                if "red" in colour:
-                    if int(colour_value) > max_red:
-                        max_red = int(colour_value)
-                if "green" in colour:
-                    if int(colour_value) > max_green:
-                        max_green = int(colour_value)
-                if "blue" in colour:
-                    if int(colour_value) > max_blue:
-                        max_blue = int(colour_value)
+                if "red" in colour and int(colour_value) > max_red:
+                    max_red = int(colour_value)
+                elif "green" in colour and int(colour_value) > max_green:
+                    max_green = int(colour_value)
+                elif "blue" in colour and int(colour_value) > max_blue:
+                    max_blue = int(colour_value)
         # add the power of the highest colours to the list
         successful_games.append(max_red * max_green * max_blue)
     # total all the numbers in the list

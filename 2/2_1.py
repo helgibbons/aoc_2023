@@ -26,14 +26,11 @@ with open("2/input.txt") as f:
                 # split colour
                 colour_value, colour = colour.split(" ")
                 # check the colours against the highest values
-                if "red" in colour:
-                    if int(colour_value) > red:
+                if "red" in colour and int(colour_value) > red:
                         game_fail = True
-                elif "green" in colour:
-                    if int(colour_value) > green:
+                elif "green" in colour and int(colour_value) > green:
                         game_fail = True
-                elif "blue" in colour:
-                    if int(colour_value) > blue:
+                elif "blue" in colour and int(colour_value) > blue:
                         game_fail = True
         if game_fail == True:
             print("Game " + game_number + " failed")
